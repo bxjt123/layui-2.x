@@ -774,18 +774,36 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-form-label-col{display: block; float: none; padding: 9px 0; line-height: 20px; text-align: left;}
 .layui-form-item .layui-inline{margin-bottom: 5px; margin-right: 10px;}
 .layui-input-block, .layui-input-inline{position: relative;}
-.layui-input-block{margin-left: 110px; min-height: 36px;}
+.layui-input-block{margin-left: 110px; min-height: 38px; box-sizing: border-box;}
 .layui-input-inline{display: inline-block; vertical-align: middle;}
 .layui-form-item .layui-input-inline{float: left; width: 190px; margin-right: 10px;}
 .layui-form-text .layui-input-inline{width: auto;}
 
+.layui-form-item[lay-size="xs"]{margin-bottom: 10px; line-height: 1;}
+.layui-form-item[lay-size="sm"]{margin-bottom: 12px;}
+.layui-form-item[lay-size="xs"] .layui-form-label{padding: 0 15px; font-size: 12px; height: 22px; line-height: 22px;}
+.layui-form-item[lay-size="sm"] .layui-form-label{padding: 0 15px; font-size: 12px; height: 30px; line-height: 30px;}
+.layui-form-item[lay-size="lg"] .layui-form-label{padding: 0 12px 0 8px; font-size: 16px; height: 44px; line-height: 44px; width: 90px;}
+.layui-form-item[lay-size="xs"] .layui-input-block{min-height: 22px;}
+.layui-form-item[lay-size="sm"] .layui-input-block{min-height: 30px;}
+.layui-form-item[lay-size="lg"] .layui-input-block{min-height: 44px;}
+.layui-form-item[lay-size="xs"] .layui-input{height: 22px; font-size: 12px;}
+.layui-form-item[lay-size="sm"] .layui-input{height: 30px; font-size: 12px;}
+.layui-form-item[lay-size="lg"] .layui-input{height: 44px; font-size: 16px;}
+.layui-form-item[lay-size="xs"] .layui-textarea{font-size: 12px;}
+.layui-form-item[lay-size="sm"] .layui-textarea{font-size: 12px;}
+.layui-form-item[lay-size="lg"] .layui-textarea{font-size: 16px;}
+
 /* 分割块 */
 .layui-form-mid{position: relative; float: left; display: block; padding: 9px 0 !important; line-height: 20px; margin-right: 10px;}
+
+.layui-form-item[lay-size="xs"] .layui-form-mid{padding: 1px 0!important; font-size: 12px;}
+.layui-form-item[lay-size="sm"] .layui-form-mid{padding: 5px 0!important; font-size:12px;}
+.layui-form-item[lay-size="lg"] .layui-form-mid{padding: 12px 0!important; font-size: 16px;}
 
 /* 警告条 */
 .layui-form-danger:focus,
 .layui-form-danger+.layui-form-select .layui-input{border-color: #ff5722 !important; box-shadow: 0 0 0 3px rgba(255,87,34,0.08);}
-
 
 /* 输入框点缀  */
 .layui-input-prefix,
@@ -798,6 +816,13 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-input-prefix .layui-icon,
 .layui-input-suffix .layui-icon,
 .layui-input-split .layui-icon{position: relative; font-size: 16px; color: #5F5F5F; transition: all .3s;}
+
+.layui-form-item[lay-size="xs"] .layui-input-prefix, .layui-form-item[lay-size="xs"] .layui-input-suffix,
+.layui-form-item[lay-size="sm"] .layui-input-prefix, .layui-form-item[lay-size="sm"] .layui-input-suffix{font-size: 12px;}
+.layui-form-item[lay-size="lg"] .layui-input-prefix, .layui-form-item[lay-size="lg"] .layui-input-suffix{font-size: 16px;}
+.layui-form-item[lay-size="xs"] .layui-input-prefix .layui-icon, .layui-form-item[lay-size="xs"] .layui-input-split .layui-icon, .layui-form-item[lay-size="xs"] .layui-input-suffix .layui-icon{font-size: 12px;}
+.layui-form-item[lay-size="sm"] .layui-input-prefix .layui-icon, .layui-form-item[lay-size="sm"] .layui-input-split .layui-icon, .layui-form-item[lay-size="sm"] .layui-input-suffix .layui-icon{font-size: 14px;}
+.layui-form-item[lay-size="lg"] .layui-input-prefix .layui-icon, .layui-form-item[lay-size="lg"] .layui-input-split .layui-icon, .layui-form-item[lay-size="lg"] .layui-input-suffix .layui-icon{font-size: 18px;}
 
 /* 输入框前后置容器 */
 .layui-input-group{position: relative; display: table; box-sizing: border-box;}
@@ -826,12 +851,20 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-input-wrap .layui-input-prefix.layui-input-split{border-width: 0; border-right-width: 1px;}
 .layui-input-wrap .layui-input-suffix.layui-input-split{border-width: 0; border-left-width: 1px;}
 
+.layui-form-item[lay-size="xs"] .layui-input-wrap{line-height: 22px;}
+.layui-form-item[lay-size="sm"] .layui-input-wrap{line-height: 30px;}
+.layui-form-item[lay-size="lg"] .layui-input-wrap{line-height: 44px;}
+
 /* 输入框动态点缀  */
 .layui-input-affix{line-height: 38px;}
 .layui-input-suffix .layui-input-affix{right: auto; left: -35px;}
 .layui-input-affix .layui-icon{color: rgba(0,0,0,.8); pointer-events: auto!important; cursor: pointer;}
 .layui-input-affix .layui-icon-clear{color: rgba(0,0,0,.3);}
 .layui-input-affix .layui-icon:hover{color: rgba(0,0,0,.6);}
+
+.layui-form-item[lay-size="xs"] .layui-input-affix{line-height: 22px;}
+.layui-form-item[lay-size="sm"] .layui-input-affix{line-height: 30px;}
+.layui-form-item[lay-size="lg"] .layui-input-affix{line-height: 44px;}
 
 /* 数字输入框动态点缀  */
 .layui-input-wrap .layui-input-number{width: 24px; padding: 0;}
@@ -846,7 +879,15 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-input-wrap .layui-input.layui-input-number-out-of-range,
 .layui-input-wrap .layui-input.layui-input-number-invalid{color:#ff5722;}
 
-
+.layui-form-item[lay-size="xs"] .layui-input-wrap .layui-input-number{width: 20px;}
+.layui-form-item[lay-size="xs"] .layui-input-wrap .layui-input-number .layui-icon{font-size: 10px;}
+.layui-form-item[lay-size="xs"] .layui-input-wrap .layui-input-number .layui-icon:before{margin-top: -4px;}
+.layui-form-item[lay-size="sm"] .layui-input-wrap .layui-input-number{width: 22px;}
+.layui-form-item[lay-size="sm"] .layui-input-wrap .layui-input-number .layui-icon{font-size: 11px;}
+.layui-form-item[lay-size="sm"] .layui-input-wrap .layui-input-number .layui-icon:before{margin-top: -5px;}
+.layui-form-item[lay-size="lg"] .layui-input-wrap .layui-input-number{width: 26px;}
+.layui-form-item[lay-size="lg"] .layui-input-wrap .layui-input-number .layui-icon{font-size: 14px;}
+.layui-form-item[lay-size="lg"] .layui-input-wrap .layui-input-number .layui-icon:before{margin-top: -7px; margin-left: -7px;}
 
 /* 下拉选择 */
 .layui-form-select{position: relative; color: #5F5F5F;}
@@ -875,6 +916,15 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-select-disabled .layui-disabled{border-color: #eee !important;}
 .layui-select-disabled .layui-edge{border-top-color: #d2d2d2}
 
+.layui-form-item[lay-size="xs"] .layui-form-select dl{top: 26px; font-size: 12px;}
+.layui-form-item[lay-size="xs"] .layui-form-selectup dl{top: auto; bottom: 26px;}
+.layui-form-item[lay-size="xs"] .layui-form-select dl dd, .layui-form-item[lay-size="xs"] .layui-form-select dl dt{line-height: 26px;}
+.layui-form-item[lay-size="sm"] .layui-form-select dl{top: 34px; font-size: 12px;}
+.layui-form-item[lay-size="sm"] .layui-form-selectup dl{top: auto; bottom: 34px;}
+.layui-form-item[lay-size="sm"] .layui-form-select dl dd, .layui-form-item[lay-size="sm"] .layui-form-select dl dt{line-height: 32px;}
+.layui-form-item[lay-size="lg"] .layui-form-select dl{top: 48px;}
+.layui-form-item[lay-size="lg"] .layui-form-selectup dl{top: auto; bottom: 48px;}
+
 /* 复选框 */
 .layui-form-checkbox{position: relative; display: inline-block; vertical-align: middle; height: 30px; line-height: 30px; margin-right: 10px; padding-right: 30px; background-color: #fff; cursor: pointer; font-size: 0;  -webkit-transition: .1s linear; transition: .1s linear; box-sizing: border-box;}
 .layui-form-checkbox > *{display: inline-block; vertical-align: middle;}
@@ -893,6 +943,13 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-form-checkbox.layui-checkbox-disabled > div{background-color: #eee !important;}
 .layui-form *[lay-checkbox]{display: none;}
 
+.layui-form-item[lay-size="xs"] .layui-form-checkbox{height: 18px; line-height: 18px; margin-right: 10px; padding-right: 22px; margin-top: 1px;}
+.layui-form-item[lay-size="xs"] .layui-form-checkbox>i{font-size: 16px; width: 22px;}
+.layui-form-item[lay-size="sm"] .layui-form-checkbox{height: 24px; line-height: 24px; margin-right: 10px; padding-right: 26px; margin-top: 2px;}
+.layui-form-item[lay-size="sm"] .layui-form-checkbox>i{font-size: 18px; width: 26px;}
+.layui-form-item[lay-size="lg"] .layui-form-checkbox{height: 36px; line-height: 36px; margin-right: 10px; padding-right: 34px; margin-top: 4px;}
+.layui-form-item[lay-size="lg"] .layui-form-checkbox>i{font-size: 22px; width: 34px;}
+
 /* 复选框-默认风格 */
 .layui-form-checkbox[lay-skin="primary"]{height: auto!important; line-height: normal!important; min-width: 18px; min-height: 18px; border: none!important; margin-right: 0; padding-left: 24px; padding-right: 0; background: none;}
 .layui-form-checkbox[lay-skin="primary"] > div{margin-top: -1px; padding-left: 0; padding-right: 15px; line-height: 18px; background: none; color: #5F5F5F;}
@@ -906,6 +963,16 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-form-checkbox[lay-skin="primary"] > .layui-icon-indeterminate{border-color: #16b777;}
 .layui-form-checkbox[lay-skin="primary"] > .layui-icon-indeterminate:before{content: ''; display: inline-block; vertical-align: middle; position: relative; width: 50%; height: 1px; margin: -1px auto 0; background-color: #16b777;}
 
+.layui-form-item[lay-size="xs"] .layui-form-checkbox[lay-skin=primary]{padding-left: 20px; margin-top: 3px; margin-right: 0; padding-right: 0; min-height: 16px;}
+.layui-form-item[lay-size="xs"] .layui-form-checkbox[lay-skin=primary]>i{width: 14px; height: 14px; line-height: 13px; font-size: 10px;}
+.layui-form-item[lay-size="xs"] .layui-form-checkbox[lay-skin=primary]>div{padding-right: 9px; line-height: 16px;}
+.layui-form-item[lay-size="sm"] .layui-form-checkbox[lay-skin=primary]{padding-left: 22px; margin-top: 8px; margin-right: 0; padding-right: 0;}
+.layui-form-item[lay-size="sm"] .layui-form-checkbox[lay-skin=primary]>i{width: 15px; height: 15px; line-height: 14px; font-size: 11px;}
+.layui-form-item[lay-size="sm"] .layui-form-checkbox[lay-skin=primary]>div{padding-right: 12px;}
+.layui-form-item[lay-size="lg"] .layui-form-checkbox[lay-skin=primary]{padding-left: 28px; margin-top: 12px; margin-right: 0; padding-right: 0;}
+.layui-form-item[lay-size="lg"] .layui-form-checkbox[lay-skin=primary]>i{width: 20px; height: 20px; line-height: 20px; font-size: 16px;}
+.layui-form-item[lay-size="lg"] .layui-form-checkbox[lay-skin=primary]>div{padding-right: 18px; margin-top: 0;}
+
 /* 复选框-开关风格 */
 .layui-form-switch{position: relative; display: inline-block; vertical-align: middle; height: 24px; line-height: 22px; min-width: 44px; padding: 0 5px; margin-top: 8px; border: 1px solid #d2d2d2; border-radius: 20px; cursor: pointer; box-sizing: border-box; background-color: #fff; -webkit-transition: .1s linear; transition: .1s linear;}
 .layui-form-switch > i{position: absolute; left: 5px; top: 3px; width: 16px; height: 16px; border-radius: 20px; background-color: #d2d2d2; -webkit-transition: .1s linear; transition: .1s linear;}
@@ -913,6 +980,22 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-form-onswitch{border-color: #16b777; background-color: #16b777;}
 .layui-form-onswitch > i{left: 100%; margin-left: -21px; background-color: #fff;}
 .layui-form-onswitch > div{margin-left: 0; margin-right: 21px; color: #fff!important;}
+
+.layui-form-item[lay-size="xs"] .layui-form-switch{height: 18px; line-height: 18px; margin-top: 1px; min-width: 36px;}
+.layui-form-item[lay-size="xs"] .layui-form-switch>div{font-size: 10px; margin-left: 15px;}
+.layui-form-item[lay-size="xs"] .layui-form-switch>i{left: 4px; top: 2px; width: 13px; height: 13px;}
+.layui-form-item[lay-size="xs"] .layui-form-onswitch>div{margin-left: 0; margin-right: 15px;}
+.layui-form-item[lay-size="xs"] .layui-form-onswitch>i{left: 100%; margin-left: -16px;}
+.layui-form-item[lay-size="sm"] .layui-form-switch{height: 22px; line-height: 21px; margin-top: 4px; min-width: 40px;}
+.layui-form-item[lay-size="sm"] .layui-form-switch>div{font-size: 11px; margin-left: 18px;}
+.layui-form-item[lay-size="sm"] .layui-form-switch>i{left: 4px; top: 3px; width: 14px; height: 14px;}
+.layui-form-item[lay-size="sm"] .layui-form-onswitch>div{margin-left: 0; margin-right: 18px;}
+.layui-form-item[lay-size="sm"] .layui-form-onswitch>i{left: 100%; margin-left: -18px;}
+.layui-form-item[lay-size="lg"] .layui-form-switch{height: 26px; line-height: 24px; margin-top: 8px; min-width: 50px;}
+.layui-form-item[lay-size="lg"] .layui-form-switch>div{font-size: 14px; margin-left: 24px;}
+.layui-form-item[lay-size="lg"] .layui-form-switch>i{left: 5px; top: 3px; width: 18px; height: 18px;}
+.layui-form-item[lay-size="lg"] .layui-form-onswitch>div{margin-left: 0; margin-right: 24px;}
+.layui-form-item[lay-size="lg"] .layui-form-onswitch>i{left: 100%; margin-left: -24px;}
 
 /* 无样式风格-根据模板自定义样式*/
 .layui-form-checkbox[lay-skin="none"] *,
@@ -944,21 +1027,41 @@ hr.layui-border-black{border-width: 0 0 1px;}
 .layui-radio-disabled > *{color: #c2c2c2!important;}
 .layui-form *[lay-radio]{display: none;}
 
+.layui-form-item[lay-size="xs"] .layui-form-radio{line-height: 20px; margin-top: 0; padding-right: 2px;}
+.layui-form-item[lay-size="xs"] .layui-form-radio>i{font-size:18px; margin-right: 4px;}
+.layui-form-item[lay-size="xs"] .layui-form-radio>div, .layui-form-item[lay-size="xs"] .layui-form-checkbox>div{font-size: 12px;}
+.layui-form-item[lay-size="sm"] .layui-form-radio{margin-top: 0; padding-right: 6px;}
+.layui-form-item[lay-size="sm"] .layui-form-radio>i{font-size: 20px; margin-right: 6px;}
+.layui-form-item[lay-size="sm"] .layui-form-radio>div, .layui-form-item[lay-size="sm"] .layui-form-checkbox>div{font-size: 12px;}
+.layui-form-item[lay-size="lg"] .layui-form-radio{line-height: 42px; margin-top: 0; padding-right: 12px;}
+.layui-form-item[lay-size="lg"] .layui-form-radio>i{font-size: 24px; margin-right: 10px;}
+.layui-form-item[lay-size="lg"] .layui-form-radio>div, .layui-form-item[lay-size="lg"] .layui-form-checkbox>div{font-size: 16px;}
+
 /* 表单方框风格 */
 .layui-form-pane .layui-form-label{width: 110px; padding: 8px 15px; height: 38px; line-height: 20px; border-width: 1px; border-style: solid; border-radius: 2px 0 0 2px; text-align: center; background-color: #fafafa; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; box-sizing: border-box;}
 .layui-form-pane .layui-input-inline{margin-left: -1px;}
 .layui-form-pane .layui-input-block{margin-left: 110px; left: -1px;}
+.layui-form-pane .layui-form-item[pane] .layui-input-block{border: 1px solid #eee;}
 .layui-form-pane .layui-input{border-radius: 0 2px 2px 0;}
 .layui-form-pane .layui-form-text .layui-form-label{float: none; width: 100%; border-radius: 2px; box-sizing: border-box; text-align: left;}
 .layui-form-pane .layui-form-text .layui-input-inline{display: block; margin: 0; top: -1px; clear: both;}
 .layui-form-pane .layui-form-text .layui-input-block{margin: 0; left: 0; top: -1px;}
 .layui-form-pane .layui-form-text .layui-textarea{min-height: 100px; border-radius: 0 0 2px 2px;}
-.layui-form-pane .layui-form-checkbox{margin: 4px 0 4px 10px;}
+.layui-form-pane .layui-form-checkbox{margin: 3px 0 3px 10px;}
 .layui-form-pane .layui-form-switch,
 .layui-form-pane .layui-form-radio{margin-top: 6px; margin-left: 10px; }
-.layui-form-pane .layui-form-item[pane]{position: relative; border-width: 1px; border-style: solid;}
-.layui-form-pane .layui-form-item[pane] .layui-form-label{position: absolute; left: 0; top: 0; height: 100%; border-width: 0px; border-right-width: 1px;}
+.layui-form-pane .layui-form-item[pane]{position: relative; border-width: 0; border-style: solid;}
+.layui-form-pane .layui-form-item[pane] .layui-form-label{position: absolute; left: 0; top: 0; height: 100%!important; border-width: 1px;}
 .layui-form-pane .layui-form-item[pane] .layui-input-inline{margin-left: 110px;}
+
+.layui-form-pane .layui-form-item[lay-size="lg"] .layui-form-label{width: 110px; padding: 0 10px;}
+.layui-form-pane .layui-form-item[lay-size="lg"].layui-form-text .layui-form-label{width: 100%;}
+.layui-form-pane .layui-form-item[lay-size="xs"] .layui-form-checkbox{margin: 1px 0 1px 10px;}
+.layui-form-pane .layui-form-item[lay-size="sm"] .layui-form-checkbox{margin: 2px 0 2px 10px;}
+.layui-form-pane .layui-form-item[lay-size="lg"] .layui-form-checkbox{margin: 3px 0 3px 10px;}
+.layui-form-pane .layui-form-item[lay-size="xs"] .layui-form-checkbox[lay-skin=primary]{margin-top: 3px;}
+.layui-form-pane .layui-form-item[lay-size="sm"] .layui-form-checkbox[lay-skin=primary]{margin-top: 8px;}
+.layui-form-pane .layui-form-item[lay-size="lg"] .layui-form-checkbox[lay-skin=primary]{margin-top: 12px; margin-bottom: 6px;}
 
 /** 表单响应式 **/
 @media screen and (max-width: 450px) {
